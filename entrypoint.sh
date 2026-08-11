@@ -62,7 +62,7 @@ if ! kill -0 "${XUI_PID}" 2>/dev/null; then
 fi
 
 echo "[railway-3xui] starting nginx on Railway PORT=${PORT}"
-nginx -c /tmp/nginx.conf -g 'daemon off:' &
+nginx -c /tmp/nginx.conf -g 'daemon off;' &
 NGINX_PID=$!
 
 cleanup() {
