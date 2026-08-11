@@ -1,0 +1,4 @@
+This distribution runs the upstream MHSanaei/3x-ui project.
+3X-UI is licensed under GPL-3.0.
+Upstream project: https://github.com/MHSanaei/3x-ui
+This wrapper contains Railway deployment files only and does not replace the upstream license.
