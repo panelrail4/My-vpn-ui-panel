@@ -22,6 +22,7 @@ fi
 
 # Generate nginx configuration from Railway runtime variables.
 envsubst '${PORT} ${XUI_PORT}' < /etc/nginx/nginx.conf > /tmp/nginx.conf
+command -v envsubst >/dev/null 2>&1 || { echo "[railway-3xui] ERROR: envsubst is missing; install gettext-base"; exit 1; }
 nginx -t -c /tmp/nginx.conf
 
 # Start official 3X-UI. It supervises the bundled Xray core.

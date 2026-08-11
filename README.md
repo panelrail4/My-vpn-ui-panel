@@ -79,3 +79,6 @@ The Railway TCP Proxy is dedicated to:
 TCP_PROXY_EXTERNAL_PORT -> service:8443 -> Xray REALITY
 
 These are intentionally separate listeners.
+
+## Fixed build dependency
+`envsubst` is provided by Ubuntu package `gettext-base`; the Dockerfile now installs it explicitly.

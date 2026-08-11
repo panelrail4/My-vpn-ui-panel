@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG XUI_VERSION=v3.5.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates curl wget nginx tar gzip openssl tzdata procps iproute2 \
+    ca-certificates curl wget nginx gettext-base tar gzip openssl tzdata procps iproute2 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/local/x-ui /data/x-ui /var/log/x-ui \
