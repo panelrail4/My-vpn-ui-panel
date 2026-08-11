@@ -85,3 +85,6 @@ These are intentionally separate listeners.
 
 ## v2 startup fix
 All XUI environment variables have safe defaults under `set -u`; `XUI_BIN_FOLDER` defaults to `/usr/local/x-ui/bin`, and the log file is created before startup.
+
+## v3 startup fix
+Removed the fragile `XUI_BIN_FOLDER` environment assignment from the startup command. With `set -u`, an unset variable could terminate the container before 3X-UI starts.

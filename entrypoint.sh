@@ -28,7 +28,6 @@ nginx -t -c /tmp/nginx.conf
 
 # Start official 3X-UI. It supervises the bundled Xray core.
 echo "[railway-3xui] starting official 3X-UI on 127.0.0.1:${XUI_PORT}"
-XUI_PORT="${XUI_PORT}" XUI_INIT_WEB_BASE_PATH="${XUI_INIT_WEB_BASE_PATH}" XUI_DB_FOLDER="${XUI_DB_FOLDER}" XUI_LOG_FOLDER="${XUI_LOG_FOLDER}" XUI_BIN_FOLDER="${XUI_BIN_FOLDER}" /usr/local/x-ui/x-ui run >>/data/x-ui/log/3x-ui.log 2>&1 &
 XUI_PID=$!
 
 # Give the panel a short startup window.
