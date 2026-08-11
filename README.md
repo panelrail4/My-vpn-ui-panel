@@ -82,3 +82,6 @@ These are intentionally separate listeners.
 
 ## Fixed build dependency
 `envsubst` is provided by Ubuntu package `gettext-base`; the Dockerfile now installs it explicitly.
+
+## v2 startup fix
+All XUI environment variables have safe defaults under `set -u`; `XUI_BIN_FOLDER` defaults to `/usr/local/x-ui/bin`, and the log file is created before startup.

@@ -2,6 +2,7 @@
 set -Eeuo pipefail
 
 mkdir -p /data/x-ui /data/x-ui/log /data/x-ui/bin /var/log/nginx /run/nginx
+touch /data/x-ui/log/3x-ui.log
 
 export XUI_PORT="${XUI_PORT:-2053}"
 export XUI_INIT_WEB_BASE_PATH="${XUI_INIT_WEB_BASE_PATH:-/panel/}"
