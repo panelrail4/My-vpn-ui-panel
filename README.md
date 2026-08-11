@@ -88,3 +88,6 @@ All XUI environment variables have safe defaults under `set -u`; `XUI_BIN_FOLDER
 
 ## v3 startup fix
 Removed the fragile `XUI_BIN_FOLDER` environment assignment from the startup command. With `set -u`, an unset variable could terminate the container before 3X-UI starts.
+
+## v4 startup fix
+The entrypoint was rewritten to avoid Bash special-parameter `$!` expansion issues caused by the previous generated command. 3X-UI is now launched directly and its PID is captured safely.
